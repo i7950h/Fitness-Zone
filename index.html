@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fitness Zone: aprende sobre movimiento, descanso y hábitos saludables.">
+  <title>Fitness Zone | Muévete a tu ritmo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Fitness Zone, inicio">
+      <span class="brand-mark">F</span><span>FITNESS<span class="brand-accent">ZONE</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" id="mainNav" aria-label="Navegación principal">
+      <button class="nav-link active" data-page="inicio">Inicio</button>
+      <button class="nav-link" data-page="ejercicios">Ejercicios</button>
+      <button class="nav-link" data-page="habitos">Hábitos</button>
+      <button class="nav-link" data-page="quiz">Mini quiz</button>
+    </nav>
+    <a class="header-cta" href="#ejercicios" data-go="ejercicios">Explorar <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="page active" id="inicio">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> BIENESTAR EN MOVIMIENTO</p>
+          <h1>Muévete.<br><span>Siéntete bien.</span></h1>
+          <p class="hero-text">Pequeños hábitos, movimiento y descanso pueden ayudarte a construir una vida más saludable. Empieza a tu ritmo.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-go="ejercicios">Descubrir ejercicios <span>→</span></button>
+            <button class="btn btn-quiet" data-go="habitos">Ver hábitos saludables</button>
+          </div>
+          <div class="hero-note"><span class="note-dot"></span> No se trata de competir, sino de cuidarte.</div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image" role="img" aria-label="Persona entrenando en un gimnasio"></div>
+          <div class="floating-card card-top"><span class="float-icon">✦</span><div><strong>Tu ritmo</strong><small>Es el ritmo correcto</small></div></div>
+          <div class="floating-card card-bottom"><span class="pulse-icon">↗</span><div><strong>Muévete hoy</strong><small>Un paso a la vez</small></div></div>
+          <div class="hero-orbit"></div>
+        </div>
+      </div>
+      <div class="stats-strip">
+        <div><strong>01</strong><span>Muévete con<br>regularidad</span></div>
+        <div><strong>02</strong><span>Descansa y<br>recupérate</span></div>
+        <div><strong>03</strong><span>Aliméntate<br>variado</span></div>
+        <div><strong>04</strong><span>Disfruta el<br>proceso</span></div>
+      </div>
+      <section class="section-block">
+        <div class="section-heading"><div><p class="eyebrow">EMPIEZA POR LO SIMPLE</p><h2>Bienestar en <span>equilibrio.</span></h2></div><p>La salud se construye con diferentes formas de cuidarte, no con una sola actividad.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card feature-green"><span class="feature-number">01 / MOVIMIENTO</span><div class="feature-symbol">↗</div><h3>Activa tu cuerpo</h3><p>Encuentra una actividad que disfrutes: caminar, bailar, jugar o practicar un deporte.</p></article>
+          <article class="feature-card feature-dark"><span class="feature-number">02 / RECUPERACIÓN</span><div class="feature-symbol">☾</div><h3>Respeta tu descanso</h3><p>Dormir bien ayuda a recuperar energía, aprender y mantener la concentración.</p></article>
+          <article class="feature-card feature-light"><span class="feature-number">03 / EQUILIBRIO</span><div class="feature-symbol">✳</div><h3>Crea buenos hábitos</h3><p>La hidratación, la alimentación variada y el tiempo de ocio también importan.</p></article>
+        </div>
+      </section>
+    </section>
+
+    <section class="page" id="ejercicios">
+      <div class="page-intro">
+        <p class="eyebrow"><span class="eyebrow-line"></span> ENCUENTRA TU MOVIMIENTO</p>
+        <h1>Hay muchas formas<br>de <span>mantenerte activo.</span></h1>
+        <p>Explora distintos tipos de actividad física. Puedes combinarlos según tus gustos, posibilidades y recomendaciones de un profesional.</p>
+      </div>
+      <div class="filter-row" aria-label="Filtrar ejercicios">
+        <span>EXPLORAR POR TIPO</span>
+        <div class="filter-buttons">
+          <button class="filter-btn selected" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="cardio">Cardio</button>
+          <button class="filter-btn" data-filter="fuerza">Fuerza</button>
+          <button class="filter-btn" data-filter="flexibilidad">Flexibilidad</button>
+          <button class="filter-btn" data-filter="equilibrio">Equilibrio</button>
+        </div>
+      </div>
+      <div class="exercise-grid" id="exerciseGrid">
+        <article class="exercise-card" data-type="cardio"><div class="exercise-photo photo-run"><span>01</span><small>CARDIO</small></div><div class="exercise-info"><h3>Caminar o trotar</h3><p>Una actividad accesible que fortalece el sistema cardiovascular y puede mejorar el ánimo.</p><div class="tag-row"><span>Al aire libre</span><span>Ritmo personal</span></div></div></article>
+        <article class="exercise-card" data-type="fuerza"><div class="exercise-photo photo-strength"><span>02</span><small>FUERZA</small></div><div class="exercise-info"><h3>Ejercicios con el peso corporal</h3><p>Movimientos como sentarse y levantarse de una silla o hacer flexiones adaptadas.</p><div class="tag-row"><span>Control</span><span>Técnica</span></div></div></article>
+        <article class="exercise-card" data-type="flexibilidad"><div class="exercise-photo photo-stretch"><span>03</span><small>FLEXIBILIDAD</small></div><div class="exercise-info"><h3>Estiramientos suaves</h3><p>Ayudan a trabajar la movilidad. Realízalos sin rebotes y sin forzar el cuerpo.</p><div class="tag-row"><span>Movilidad</span><span>Suavidad</span></div></div></article>
+        <article class="exercise-card" data-type="equilibrio"><div class="exercise-photo photo-balance"><span>04</span><small>EQUILIBRIO</small></div><div class="exercise-info"><h3>Posturas de equilibrio</h3><p>Practicar apoyos estables mejora la coordinación y el control corporal.</p><div class="tag-row"><span>Coordinación</span><span>Concentración</span></div></div></article>
+      </div>
+      <p class="small-note">Consejo: comienza de forma gradual, utiliza un espacio seguro y detente si sientes dolor, mareo o malestar.</p>
+    </section>
+
+    <section class="page" id="habitos">
+      <div class="page-intro">
+        <p class="eyebrow"><span class="eyebrow-line"></span> PEQUEÑAS ACCIONES, GRAN VALOR</p>
+        <h1>Cuida tu bienestar<br><span>día a día.</span></h1>
+        <p>Marca los hábitos que ya realizaste hoy. No es una competencia ni una obligación: es una forma sencilla de observar tus rutinas.</p>
+      </div>
+      <div class="habit-layout">
+        <div class="habit-panel">
+          <div class="panel-top"><div><p class="eyebrow">TU LISTA DIARIA</p><h2>Hoy me cuido así</h2></div><span class="today-label" id="todayLabel"></span></div>
+          <div class="habit-list">
+            <label class="habit-item"><input type="checkbox" class="habit-check"><span class="check-custom"></span><span><strong>Tomé agua durante el día</strong><small>Escucha tu sed y mantente hidratado.</small></span><b>01</b></label>
+            <label class="habit-item"><input type="checkbox" class="habit-check"><span class="check-custom"></span><span><strong>Realicé alguna actividad que disfruto</strong><small>Caminar, bailar, jugar o practicar deporte.</small></span><b>02</b></label>
+            <label class="habit-item"><input type="checkbox" class="habit-check"><span class="check-custom"></span><span><strong>Comí alimentos variados</strong><small>Incluye variedad de alimentos en tus comidas.</small></span><b>03</b></label>
+            <label class="habit-item"><input type="checkbox" class="habit-check"><span class="check-custom"></span><span><strong>Hice una pausa para relajarme</strong><small>Respira, escucha música o realiza algo tranquilo.</small></span><b>04</b></label>
+            <label class="habit-item"><input type="checkbox" class="habit-check"><span class="check-custom"></span><span><strong>Preparé mi descanso</strong><small>Intenta mantener una rutina de sueño.</small></span><b>05</b></label>
+          </div>
+          <div class="progress-area"><div class="progress-label"><span>Tu lista de hoy</span><strong id="progressText">0 de 5</strong></div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><p id="progressMessage">Cada pequeño paso cuenta.</p></div>
+          <button class="btn btn-outline" id="resetHabits">Reiniciar lista</button>
+        </div>
+        <aside class="habit-aside"><div class="aside-art">✳</div><p class="eyebrow">RECUERDA</p><h2>El equilibrio también es salud.</h2><p>No necesitas hacerlo todo perfecto. Los hábitos se construyen poco a poco y pueden cambiar según tus necesidades.</p><div class="quote-mark">“</div><blockquote>Haz espacio para moverte, descansar y disfrutar.</blockquote></aside>
+      </div>
+    </section>
+
+    <section class="page" id="quiz">
+      <div class="page-intro">
+        <p class="eyebrow"><span class="eyebrow-line"></span> PON A PRUEBA LO QUE SABES</p>
+        <h1>¿Cuánto sabes sobre<br><span>vida saludable?</span></h1>
+        <p>Responde estas preguntas rápidas y descubre cuánto aprendiste sobre actividad física y bienestar.</p>
+      </div>
+      <div class="quiz-wrap">
+        <div class="quiz-top"><span class="quiz-label">MINI QUIZ</span><span id="questionCount">PREGUNTA 1 DE 4</span></div>
+        <div class="quiz-progress"><div id="quizProgress"></div></div>
+        <div id="quizContent">
+          <h2 id="questionText">¿Qué actividad trabaja principalmente la resistencia cardiovascular?</h2>
+          <div class="answer-list" id="answerList"></div>
+          <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+          <button class="btn btn-primary quiz-next" id="nextQuestion" disabled>Comprobar respuesta</button>
+        </div>
+        <div class="quiz-result hidden" id="quizResult"><div class="result-icon">✦</div><p class="eyebrow">QUIZ COMPLETADO</p><h2 id="resultTitle">¡Buen trabajo!</h2><p id="resultText"></p><button class="btn btn-primary" id="restartQuiz">Volver a intentarlo ↻</button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark">F</span><span>FITNESS<span class="brand-accent">ZONE</span></span></a>
+    <p>Muévete a tu ritmo. Cuida tu bienestar.</p>
+    <span class="copyright">PROYECTO EDUCATIVO · 2026</span>
+  </footer>
+</body>
+</html>
